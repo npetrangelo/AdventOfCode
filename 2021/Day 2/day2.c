@@ -15,14 +15,13 @@ SUBMARINE* make_submarine() {
 }
 
 int main(int argc, char **argv) {
-	char *str;
+	char str[10];
 	int mag;
 	SUBMARINE *sub = make_submarine();
 	FILE *input;
 	input = fopen("input.txt", "r");
 	printf("Opened file\n");
 	while (fscanf(input, "%s %d\n", str, &mag) != EOF) {
-		printf("%s\n", str);
 		switch (str[0]) {
 			case 'f':
 				sub->x += mag;
@@ -36,4 +35,6 @@ int main(int argc, char **argv) {
 		}
 	}
 	printf("Product of final x and depth: %d\n", sub->x * sub->depth);
+	free(sub);
+	return 0;
 }
