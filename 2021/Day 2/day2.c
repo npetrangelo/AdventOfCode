@@ -1,6 +1,5 @@
 #include <stdlib.h>
 #include <stdio.h>
-#include <limits.h>
 
 typedef struct {
 	int x;
@@ -36,6 +35,7 @@ void part1() {
 				break;
 		}
 	}
+	fclose(input);
 	printf("Product of final x and depth: %d\n", sub->x * sub->depth);
 	free(sub);
 }
@@ -61,6 +61,7 @@ void part2() {
 				break;
 		}
 	}
+	fclose(input);
 	printf("Product of final x and depth: %d\n", sub->x * sub->depth);
 	free(sub);
 }
