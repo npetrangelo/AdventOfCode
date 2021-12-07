@@ -1,5 +1,4 @@
 def read_input(filename):
-    file_lines = []
     with open(filename) as f:
         draws = [int(draw) for draw in f.readline().strip().split(",")]
         print(draws)
@@ -66,4 +65,3 @@ print(calc_score(win_board, win_draw, win_drawn))
 lose_board, lose_draw, lose_drawn = loser()
 print(f"Losing board = {lose_board} won at draw {lose_draw}")
 print(calc_score(lose_board, lose_draw, lose_drawn))
-
