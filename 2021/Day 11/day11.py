@@ -44,7 +44,9 @@ def step():
         for x in range(len(octopuses[0])):
             flash(x, y)
 
-for _ in range(100):
+step_count = 0
+while len(flashed) < 100:
     step()
+    step_count += 1
 
-print(num_flashed)
+print(step_count)
