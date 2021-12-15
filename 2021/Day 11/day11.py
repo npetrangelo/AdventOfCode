@@ -1,5 +1,5 @@
 import sys
-from termcolor import colored, cprint
+from termcolor import colored
 
 filename = "input.txt"
 
